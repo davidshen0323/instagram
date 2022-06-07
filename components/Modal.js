@@ -72,10 +72,10 @@ function Modal() {
     <Transition.Root show={open} as={Fragment}>
       <Dialog
         as="div"
-        className="fixed z-10 inset-0 overflow-y-auto"
+        className="fixed z-10 inset-0 overflow-y-auto mt-24"
         onClose={setOpen}
       >
-        <div className="flex items-end justify-center min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-end justify-center md:min-h-[800px] sm:min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -118,7 +118,7 @@ function Modal() {
                 ) : (
                   <div
                     onClick={() => filePickerRef.current.click()}
-                    className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer"
+                    className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer navBtn"
                   >
                     <CameraIcon
                       className="h-6 w-6 text-red-600"
@@ -161,7 +161,7 @@ function Modal() {
                     disabled={!selectedFile}
                     className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 
                     bg-red-600 text-base font-medium text-white hover:bg-red-700
-                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500
+                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 duration-300
                     sm:text-sm disabled:bg-gray-300 disabled:cursor-not-allowed hover:disabled:bg-gray-300"
                     onClick={uploadPost}
                   >
